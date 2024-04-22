@@ -1,0 +1,130 @@
+.navbar-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+  }
+.sticky {
+  position: fixed;
+  background-color: #ff7300;
+  top: 0;
+}
+
+  .navbar-container-inside{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .logo {
+    float: left;
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+  }
+  
+  .menu {
+    float: right;
+  }
+  
+  .menu li {
+    display: inline;
+    margin-left: 20px;
+    position: relative;
+  }
+  
+  .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 7px 15px;
+    border-radius: 5px;
+  }
+
+
+  .menu li a.profile , .menu li a:hover {
+    background-color: #ff6600;
+  }
+
+  .menu li a.profile:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #ff8533;
+  }
+  .dropdown-menu {
+    position: absolute;
+    background-color: #ffffff;
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    min-height: 80px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0;
+    margin: 0;
+    right: -76px;
+    top: 28px;
+    border-top: 4px solid #ff8533;
+  }
+  .dropdown-menu li a {
+    padding: 7px 10px;
+    width: 100%;
+    display: flex;
+    color: black;
+  }
+
+  .menu li.li-profile:hover .dropdown-menu {
+    display: flex;
+  }
+
+
+  .book-ticket{
+    border: none;
+    background-color: greenyellow;
+    padding: 7px 10px;
+    font-weight: 600;
+    margin: 0 20px;
+    width: 160px;
+    cursor: pointer;
+  }
+  .book-ticket:hover {
+    background-color: green;
+  }

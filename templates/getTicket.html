@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Ticket - Concert Tickets</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .ticket-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .ticket-form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .ticket-form select,
+    .ticket-form input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .ticket-form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff6600;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .ticket-form input[type="submit"]:hover {
+      background-color: #ff8533;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Get Ticket</h2>
+    <div class="ticket-form">
+      <form action="#" method="POST">
+        <label for="concert">Select Concert:</label>
+        <select id="concert" name="concert">
+          <option value="rock">Rock On!</option>
+          <option value="jazz">Jazz Night</option>
+          <option value="pop">Pop Party</option>
+        </select>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+        <input type="submit" value="Get Ticket">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

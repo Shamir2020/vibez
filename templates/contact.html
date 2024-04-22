@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Concert Tickets</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header .logo h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .menu {
+      margin-top: 20px;
+    }
+
+    .menu li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    .menu li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .contact-form {
+      margin-top: 50px;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ff6600;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #ff8533;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p, footer .footer-menu {
+      margin: 0;
+    }
+
+    footer .footer-menu li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    footer .footer-menu li a {
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Concert Tickets</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="concerts.html">Concerts</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Contact Form Section -->
+  <section class="contact-form">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have a question or feedback? Fill out the form below to get in touch with us.</p>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Concert Tickets. All Rights Reserved.</p>
+      <ul class="footer-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="concerts.html">Concerts</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

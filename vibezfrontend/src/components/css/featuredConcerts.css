@@ -1,0 +1,50 @@
+/* Featured Concerts Section Styles */
+.featured-concerts {
+    padding: 50px 0;
+  }
+  
+  .featured-concerts h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .concert-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .concert-cards .concert-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  .concert-card img{
+    transition: 0.3s transform ease-in-out;
+  }
+  .concert-card img:hover{
+    transform: scale(1.05);
+  }
+  .concert-cards .concert-card {
+    width: 360px;
+  }
+  .concert-card {
+    margin: 0 20px 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .concert-card img {
+    width: 50%;
+    height: 25vw;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .featured-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
