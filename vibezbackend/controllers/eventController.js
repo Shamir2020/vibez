@@ -25,7 +25,8 @@ const CreateEvent = async (req, res) => {
             organizer: id,
             normalSeats: venue.normal,
             vipSeats: venue.vip,
-            vvipSeats: venue.vvip
+            vvipSeats: venue.vvip,
+            description: req.body.description
 
         })
 
@@ -61,7 +62,8 @@ const UpdateEvent = async (req, res) => {
                 normalPrice: req.body.normalPrice,
                 vvipPrice: req.body.vvipPrice,
                 eventImage: req.file.path,
-                artistName: req.body.artistName
+                artistName: req.body.artistName,
+                description: req.body.description
             
             })
         }
@@ -74,6 +76,7 @@ const UpdateEvent = async (req, res) => {
                 normalPrice: req.body.normalPrice,
                 vvipPrice: req.body.vvipPrice,
                 artistName: req.body.artistName,
+                description: req.body.description
 
             })
         }

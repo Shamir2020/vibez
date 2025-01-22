@@ -1,0 +1,43 @@
+.checkoutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkoutInside {
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px 0 40px 0;
+}
+.checkoutInside form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+.checkoutInside input[type='text'], .checkoutInside input[type='number'], .checkoutInside input[type='email'], .checkoutInside select{
+    height: 35px;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+
+.payment-btn {
+    padding: 7px 7px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    background-color: greenyellow;
+    border-radius: 4px;
+    word-spacing: 3px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.2s background-color ease-in;
+}
+.payment-btn:hover {
+    background-color: rgb(105, 174, 2);
+}

@@ -18,6 +18,8 @@ import VenueManagement from './admin/venueManagement';
 import VenueForm from './admin/venueForm';
 import ApproveEvents from './admin/approveEvents';
 import BuyTicket from './pages/buyTicket';
+import Checkout from './pages/checkout';
+import PaymentSuccess from './pages/paymentSuccess';
 function App() {
   return (
     <div className="App">
@@ -42,6 +44,7 @@ function App() {
 
 
           <Route path='/buy-ticket/:id' element={<BuyTicket />} />
+          <Route path='/checkout/:id' element={<Checkout />} />
 
 
           {/* Organizer  */}
@@ -61,6 +64,13 @@ function App() {
 
           {/* Admin */}
           
+          {/* Payment  */}
+
+          <Route path='/success/:transactionId' element={<PaymentSuccess />} />
+
+          {/* Payment */}
+
+
         </Routes>
       </BrowserRouter>
     </div>

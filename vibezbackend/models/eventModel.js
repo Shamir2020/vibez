@@ -60,11 +60,15 @@ const eventSchema = new mongoose.Schema({
             ref: 'User'
         }
     ],
+    description: {
+        type: String
+    },
 
     approved:{
         type: Boolean,
         default: false
-    }
+    },
+
 
 })
 

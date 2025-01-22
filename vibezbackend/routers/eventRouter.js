@@ -5,10 +5,8 @@ const eventRouter = express.Router()
 
 
 
-
+// http://localhost:4000/api/event/:userId
 eventRouter.post('/:userId', CreateEvent)
-
-
 
 eventRouter.get('/organizer/:userId',GetOrganizerEvent)
 

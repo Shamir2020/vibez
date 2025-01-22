@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, useNavigate } from "react-router-dom"
 import Navbar2 from "../components/navbar2"
 import Footer from "../components/footer"
 import toast from "react-hot-toast"
@@ -11,6 +11,7 @@ const BuyTicket = ()=>{
     const [event, setEvent] = useState(null)
     const params = useParams()
     const id = params.id 
+    const navigate = useNavigate()
 
     const decoded = jwtDecode(localStorage.getItem('token'))
     const userId = decoded.id
@@ -24,27 +25,10 @@ const BuyTicket = ()=>{
         }
     }
 
-    const BookTicketRequest = async (array) =>{
-        const response = await fetch('/api/ticket/book', {
-            method: 'POST',
-            headers: {
-                'Content-Type':'application/json'
-            },
-            body: JSON.stringify({
-                userId: array[1],
-                eventId: array[0],
-                ticketType: array[2]
-            })
-        })
-        if (response.ok) {
-            toast.success('Ticket has been booked')
-            window.location.reload()
-        }
-        else {
-            const data = await response.json()
-            toast.error(data.error)
-        }
+    const moveToTicketCheckout = (id)=>{
+        navigate(`/checkout/${id}`)
     }
+
 
     useEffect(()=>{
         FetchConcert()
@@ -70,9 +54,11 @@ const BuyTicket = ()=>{
 
                 <h3>Seats left - </h3>
 
-                <p>Normal Ticket Price - {event?.normalSeats} <button onClick={()=>BookTicketRequest([event?._id,userId, 'normal'])} className="book-ticket">Book normal ticket</button></p>
-                <p>VIP Ticket Price - {event?.vipSeats} <button onClick={()=>BookTicketRequest([event?._id,userId, 'vip'])} className="book-ticket">Book VIP Ticket</button></p>
-                <p>VVIP Ticket Price - {event?.vvipSeats} <button onClick={()=>BookTicketRequest([event?._id,userId, 'vvip'])} className="book-ticket">Book VVIP Ticket</button></p>
+                <p>Normal Tickets left - {event?.normalSeats}</p>
+                <p>VIP Tickets left - {event?.vipSeats} </p>
+                <p>VVIP Tickets left - {event?.vvipSeats}</p>
+
+                <button onClick={()=>moveToTicketCheckout(event?._id)} className="book-ticket">Book Ticket now</button>
 
 
         

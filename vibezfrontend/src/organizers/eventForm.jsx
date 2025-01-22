@@ -31,7 +31,7 @@ const EventForm = ()=>{
     const [vvipPrice, setVvipPrice] = useState('')
     const [venue, setVenue] = useState('')
     const [image, setImage] = useState('')
-
+    const [description, setDescription] = useState('')
     const [venues, setVenues] = useState([])
 
 
@@ -63,6 +63,7 @@ const EventForm = ()=>{
         formData.append('vvipPrice', vvipPrice)
         formData.append('venue', venue)
         formData.append('eventImage',image)
+        formData.append('description', description)
 
         if (courseData[0] == 'Create'){
             axios.post(`/api/event/${userId}`,formData, {
@@ -173,7 +174,13 @@ const EventForm = ()=>{
 
                 <label htmlFor="courseImage">Image</label>
                 <input type="file" name="courseImage" onChange={(e)=>setImage(e.target.files[0])}/>
-
+                
+                <label htmlFor="description">Description</label>
+                <JoditEditor 
+                    ref={editor}
+                    value={description}
+                    onChange={newContent=>setDescription(newContent)} 
+                />
 
                 <button onClick={submitForm} className="create-btns">{courseData[0]} Event</button>
 
