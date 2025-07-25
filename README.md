@@ -1,6 +1,8 @@
-# 🎤 Vibez — Concert & Event Management Website + App
+# 🎤 Vibez — Concert & Event Management Website
 
 **Vibez** is a comprehensive concert and event management platform that empowers organizers, artists, and fans to manage, promote, and enjoy live music events — from booking to ticketing, all in one seamless system.
+
+## Project completion - 85%
 
 ---
 
